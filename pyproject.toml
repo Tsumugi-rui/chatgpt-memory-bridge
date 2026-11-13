@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chatgpt-memory-bridge"
+version = "0.10.11"
+description = "Local archive-first conversation and personal memory migration"
+requires-python = ">=3.11"
+dependencies = ["ijson>=3.2,<4"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+crypto = ["cryptography>=42"]
+
+[project.scripts]
+memory-bridge = "memory_bridge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+memory_bridge = ["MemoryBridge.ico"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+

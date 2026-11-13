@@ -1,0 +1,9 @@
+work/
+outputs/
+output/
+node_modules/
+__pycache__/
+.venv/
+.pytest_cache/
+*.egg-info/
+data/

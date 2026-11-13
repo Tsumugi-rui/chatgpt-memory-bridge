@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Memory Bridge · 对话备份",
+  "version": "1.4.10",
+  "description": "在当前 ChatGPT 对话中自动翻阅、保存正文和图片，导出本地迁移包。",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "unlimitedStorage",
+    "tabs",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:18765/*",
+    "https://chatgpt.com/*",
+    "https://*.oaiusercontent.com/*",
+    "https://*.oaistatic.com/*",
+    "https://images.openai.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "备份当前对话"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

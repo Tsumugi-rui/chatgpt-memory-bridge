@@ -1,0 +1,4 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>对话备份</title>
+<style>body{width:310px;padding:18px;font:14px system-ui;color:#25433e;line-height:1.7;background:#ffffff}h1{font-size:19px}button{width:100%;padding:12px;border:0;border-radius:10px;background:#202123;color:white;font-size:15px;cursor:pointer}small{color:#60776d}#status{white-space:pre-wrap}</style>
+<h1>ChatGPT Memory Bridge</h1><p>打开要保存的 ChatGPT 对话，然后点击下方按钮。操作面板会留在网页右下角。</p>
+<button id="open">打开备份面板</button><p>打开迁移软件后会自动连接，无需配对码。</p><details><summary>备用连接方式</summary><label>备用配对（自动连接失败时使用）：<input id="code" placeholder="软件显示的 6 位配对码" maxlength="6" style="width:95%;padding:8px"></label><button id="pair" style="margin-top:8px">使用配对码连接</button></details><p id="status" role="status"></p><small>连接后，在软件读取对话列表、选择对话并自动导出。超过 120 MiB 时分卷传送，同一对话不会拆成多条记录。保留已有断点，请在原插件目录更新后重新加载。</small><script src="popup.js"></script></html>
